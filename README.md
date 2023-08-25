@@ -1,7 +1,7 @@
 # VintaSoft WinForms OCR Demo
 
 This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.html">VintaSoft Imaging .NET SDK</a> and demonstrates how to recognize text in images:
-* Load images from file or acquire images from scanner.
+* Load images from file or acquire images from TWAIN scanner.
 * Process images before OCR (invert, rotate, binarize, remove noise).
 * Segment image before OCR.
 * Visualize image segmentation using custom visual tool (RecognitionRegionEditorTool).
