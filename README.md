@@ -16,7 +16,7 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
 
 
 ## Screenshot
-<img src="vintasoft-ocr-demo.png" alt="VintaSoft OCR Demo">
+<img src="vintasoft-ocr-demo.png" title="VintaSoft OCR Demo">
 
 
 ## Usage
