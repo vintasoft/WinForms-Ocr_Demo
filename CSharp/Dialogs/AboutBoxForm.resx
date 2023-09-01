@@ -142,7 +142,7 @@
    
 - Save OCR results as text file.
 
-- Savie OCR results as searchable PDF document in 2 modes: text only, hidden text over the image.
+- Save OCR results as searchable PDF document in 2 modes: text only, hidden text over the image.
 
 
 The project is available in C# and VB.NET for Visual Studio .NET.</value>
