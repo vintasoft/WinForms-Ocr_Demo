@@ -1825,6 +1825,9 @@ namespace OcrDemo
                     // adds text regions from image segmentation results to the text recognition regions
                     AddSegmentationResultsToRecognitionRegions(regions, segmentationResults[image]);
                 }
+
+                // update highlight
+                HighlightTextRecognitionRegionsOnImage();
             }
         }
 
@@ -1860,6 +1863,7 @@ namespace OcrDemo
                 // create image processing command for image segmentation
                 DocumentSegmentationCommand segmentationCommand = new DocumentSegmentationCommand();
                 segmentationCommand.BorderSize = 2;
+                segmentationCommand.UniteTextRegions = true;
                 // segment image
                 segmentationCommand.ExecuteInPlace(image);
 
