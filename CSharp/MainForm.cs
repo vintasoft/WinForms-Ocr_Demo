@@ -279,6 +279,8 @@ namespace OcrDemo
                         @"Release\net6.0-windows\TesseractOCR\",
                         @"Debug\net7.0-windows\TesseractOCR\",
                         @"Release\net7.0-windows\TesseractOCR\",
+                        @"Debug\net8.0-windows\TesseractOCR\",
+                        @"Release\net8.0-windows\TesseractOCR\",
                     };
 
                     // search tesseract dll
@@ -1862,8 +1864,8 @@ namespace OcrDemo
             {
                 // create image processing command for image segmentation
                 DocumentSegmentationCommand segmentationCommand = new DocumentSegmentationCommand();
-                segmentationCommand.BorderSize = 2;
                 segmentationCommand.UniteTextRegions = true;
+                segmentationCommand.BorderSize = 2;
                 // segment image
                 segmentationCommand.ExecuteInPlace(image);
 

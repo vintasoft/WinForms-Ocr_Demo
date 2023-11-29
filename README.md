@@ -29,9 +29,9 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
 
 3. Tesseract OCR 5 allows to recognize text in more than 100 languages. This project contains only English dictionary. If you want to recognize not English text, please download not English dictionaries here: <a href="https://www.vintasoft.com/docs/vsimaging-dotnet/Programming-Ocr-Prepare_OCR_engine_for_text_recognition.html" target="_blank">https://www.vintasoft.com/docs/vsimaging-dotnet/Programming-Ocr-Prepare_OCR_engine_for_text_recognition.html</a>.
 
-4. Build the project ("OcrDemo.Net7.csproj" file) in Visual Studio or using .NET CLI:
+4. Build the project ("OcrDemo.Net8.csproj" file) in Visual Studio or using .NET CLI:
    ```
-   dotnet build OcrDemo.Net7.csproj
+   dotnet build OcrDemo.Net8.csproj
    ```
 
 5. Run compiled application and try to recognize text in images.
