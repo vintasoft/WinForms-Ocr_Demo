@@ -74,7 +74,7 @@ namespace OcrDemo
         #region Methods
 
         /// <summary>
-        /// Handles the Click event of OkButton object.
+        /// Handles the Click event of okButton object.
         /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -94,7 +94,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of CleanupOcrPageBeforeProcessingCheckBox object.
+        /// Handles the CheckedChanged event of cleanupOcrPageBeforeProcessingCheckBox object.
         /// </summary>
         private void cleanupOcrPageBeforeProcessingCheckBox_CheckedChanged(object sender, EventArgs e)
         {

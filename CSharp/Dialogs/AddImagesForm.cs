@@ -174,7 +174,7 @@ namespace DemosCommonCode.Ocr
         #region Add Images
 
         /// <summary>
-        /// Handles the Click event of AddFromFileButton object.
+        /// Handles the Click event of addFromFileButton object.
         /// </summary>
         private void addFromFileButton_Click(object sender, EventArgs e)
         {
@@ -183,7 +183,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of AddFromScannerButton object.
+        /// Handles the Click event of addFromScannerButton object.
         /// </summary>
         private void addFromScannerButton_Click(object sender, EventArgs e)
         {
@@ -197,7 +197,7 @@ namespace DemosCommonCode.Ocr
         #region Image Processing
 
         /// <summary>
-        /// Handles the Click event of InvertButton object.
+        /// Handles the Click event of invertButton object.
         /// </summary>
         private void invertButton_Click(object sender, EventArgs e)
         {
@@ -205,7 +205,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of AdaptiveBinarizeButton object.
+        /// Handles the Click event of adaptiveBinarizeButton object.
         /// </summary>
         private void adaptiveBinarizeButton_Click(object sender, EventArgs e)
         {
@@ -213,7 +213,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of GlobalBinarizeButton object.
+        /// Handles the Click event of globalBinarizeButton object.
         /// </summary>
         private void globalBinarizeButton_Click(object sender, EventArgs e)
         {
@@ -221,7 +221,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of ThresholdBinarizeButton object.
+        /// Handles the Click event of thresholdBinarizeButton object.
         /// </summary>
         private void thresholdBinarizeButton_Click(object sender, EventArgs e)
         {
@@ -237,7 +237,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of RotateButton object.
+        /// Handles the Click event of rotateButton object.
         /// </summary>
         private void rotateButton_Click(object sender, EventArgs e)
         {
@@ -253,7 +253,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveTablesButton object.
+        /// Handles the Click event of removeTablesButton object.
         /// </summary>
         private void removeTablesButton_Click(object sender, EventArgs e)
         {
@@ -263,7 +263,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of AutoTextInvertButton object.
+        /// Handles the Click event of autoTextInvertButton object.
         /// </summary>
         private void autoTextInvertButton_Click(object sender, EventArgs e)
         {
@@ -273,7 +273,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of AutoOrientationButton object.
+        /// Handles the Click event of autoOrientationButton object.
         /// </summary>
         private void autoOrientationButton_Click(object sender, EventArgs e)
         {
@@ -286,7 +286,7 @@ namespace DemosCommonCode.Ocr
 
 
         /// <summary>
-        /// Handles the CheckedChanged event of OcrPreprocessingCheckBox object.
+        /// Handles the CheckedChanged event of ocrPreprocessingCheckBox object.
         /// </summary>
         private void ocrPreprocessingCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -311,7 +311,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the ThumbnailAdded event of ThumbnailViewer1 object.
+        /// Handles the ThumbnailAdded event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_ThumbnailAdded(object sender, ThumbnailEventArgs e)
         {
@@ -320,7 +320,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the ThumbnailRemoved event of ThumbnailViewer1 object.
+        /// Handles the ThumbnailRemoved event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_ThumbnailRemoved(object sender, ThumbnailEventArgs e)
         {
@@ -329,7 +329,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonCancel object.
+        /// Handles the Click event of buttonCancel object.
         /// </summary>
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -338,7 +338,7 @@ namespace DemosCommonCode.Ocr
         }
 
         /// <summary>
-        /// Handles the Click event of OkButton object.
+        /// Handles the Click event of okButton object.
         /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {

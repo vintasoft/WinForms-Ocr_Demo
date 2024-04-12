@@ -504,7 +504,7 @@ namespace OcrDemo
         #region 'File' menu
 
         /// <summary>
-        /// Handles the Click event of OpenToolStripMenuItem object.
+        /// Handles the Click event of openToolStripMenuItem object.
         /// </summary>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -525,7 +525,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of AddToolStripMenuItem object.
+        /// Handles the Click event of addToolStripMenuItem object.
         /// </summary>
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -544,7 +544,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ScanImagesToolStripMenuItem object.
+        /// Handles the Click event of scanImagesToolStripMenuItem object.
         /// </summary>
         private void scanImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -564,7 +564,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CloseImagesToolStripMenuItem object.
+        /// Handles the Click event of closeImagesToolStripMenuItem object.
         /// </summary>
         private void closeImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -572,7 +572,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SaveOcrResultToPdfDocumentWithTextOnlyModeToolStripMenuItem object.
+        /// Handles the Click event of saveOcrResultToPdfDocumentWithTextOnlyModeToolStripMenuItem object.
         /// </summary>
         private void saveOcrResultToPdfDocumentWithTextOnlyModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -584,7 +584,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of SaveOcrResultToPdfDocumentWithImageOverTextModeToolStripMenuItem object.
+        /// Handles the Click event of saveOcrResultToPdfDocumentWithImageOverTextModeToolStripMenuItem object.
         /// </summary>
         private void saveOcrResultToPdfDocumentWithImageOverTextModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -595,7 +595,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfImageOverTextPDFA1aToolStripMenuItem object.
+        /// Handles the Click event of pdfImageOverTextPDFA1aToolStripMenuItem object.
         /// </summary>
         private void pdfImageOverTextPDFA1aToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -606,7 +606,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfImageOverTextPDFA1bToolStripMenuItem object.
+        /// Handles the Click event of pdfImageOverTextPDFA1bToolStripMenuItem object.
         /// </summary>
         private void pdfImageOverTextPDFA1bToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -618,7 +618,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of PdfImageOverTextPDFA2aToolStripMenuItem object.
+        /// Handles the Click event of pdfImageOverTextPDFA2aToolStripMenuItem object.
         /// </summary>
         private void pdfImageOverTextPDFA2aToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -629,7 +629,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfImageOverTextPDFA2bToolStripMenuItem object.
+        /// Handles the Click event of pdfImageOverTextPDFA2bToolStripMenuItem object.
         /// </summary>
         private void pdfImageOverTextPDFA2bToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -640,7 +640,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfImageOverTextPDFA4ToolStripMenuItem object.
+        /// Handles the Click event of pdfImageOverTextPDFA4ToolStripMenuItem object.
         /// </summary>
         private void pdfImageOverTextPDFA4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -652,7 +652,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of SaveOcrResultToPdfDocumentWithTextOverImageModeToolStripMenuItem object.
+        /// Handles the Click event of saveOcrResultToPdfDocumentWithTextOverImageModeToolStripMenuItem object.
         /// </summary>
         private void saveOcrResultToPdfDocumentWithTextOverImageModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -663,7 +663,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImagePDFA1aToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImagePDFA1aToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImagePDFA1aToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -674,7 +674,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImagePDFA1bToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImagePDFA1bToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImagePDFA1bToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -686,7 +686,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImagePDFA2aToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImagePDFA2aToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImagePDFA2aToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -697,7 +697,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImagePDFA2bToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImagePDFA2bToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImagePDFA2bToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -708,7 +708,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImagePDFA4ToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImagePDFA4ToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImagePDFA4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -719,7 +719,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of PdfTextOverImageSettingsToolStripMenuItem object.
+        /// Handles the Click event of pdfTextOverImageSettingsToolStripMenuItem object.
         /// </summary>
         private void pdfTextOverImageSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -734,7 +734,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CleanupSettingsToolStripMenuItem object.
+        /// Handles the Click event of cleanupSettingsToolStripMenuItem object.
         /// </summary>
         private void cleanupSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -751,7 +751,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SaveAsFormattedTextFileToolStripMenuItem object.
+        /// Handles the Click event of saveAsFormattedTextFileToolStripMenuItem object.
         /// </summary>
         private void saveAsFormattedTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -764,7 +764,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SaveAsTextFileToolStripMenuItem object.
+        /// Handles the Click event of saveAsTextFileToolStripMenuItem object.
         /// </summary>
         private void saveAsTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -777,7 +777,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ExitToolStripMenuItem object.
+        /// Handles the Click event of exitToolStripMenuItem object.
         /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -792,7 +792,7 @@ namespace OcrDemo
 #region Thumbnail viewer
 
         /// <summary>
-        /// Handles the Click event of ThumbnailViewerSettingsToolStripMenuItem object.
+        /// Handles the Click event of thumbnailViewerSettingsToolStripMenuItem object.
         /// </summary>
         private void thumbnailViewerSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -808,7 +808,7 @@ namespace OcrDemo
 #region Image viewer
 
         /// <summary>
-        /// Handles the Click event of ImageScaleModeMenuItem object.
+        /// Handles the Click event of imageScaleModeMenuItem object.
         /// </summary>
         private void imageScaleModeMenuItem_Click(object sender, EventArgs e)
         {
@@ -828,7 +828,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RotateClockwiseToolStripMenuItem object.
+        /// Handles the Click event of rotateClockwiseToolStripMenuItem object.
         /// </summary>
         private void rotateClockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -836,7 +836,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CounterclockwiseToolStripMenuItem object.
+        /// Handles the Click event of counterclockwiseToolStripMenuItem object.
         /// </summary>
         private void counterclockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -844,7 +844,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CenterImageToolStripMenuItem object.
+        /// Handles the Click event of centerImageToolStripMenuItem object.
         /// </summary>
         private void centerImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -864,7 +864,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ImageViewerSettingsToolStripMenuItem object.
+        /// Handles the Click event of imageViewerSettingsToolStripMenuItem object.
         /// </summary>
         private void imageViewerSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -882,7 +882,7 @@ namespace OcrDemo
 #region 'Segmentation' menu
 
         /// <summary>
-        /// Handles the Click event of SegmentCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of segmentCurrentImageToolStripMenuItem object.
         /// </summary>
         private void segmentCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -897,7 +897,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SegmentAllImagesToolStripMenuItem object.
+        /// Handles the Click event of segmentAllImagesToolStripMenuItem object.
         /// </summary>
         private void segmentAllImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -913,7 +913,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveSegmentationResultForCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of removeSegmentationResultForCurrentImageToolStripMenuItem object.
         /// </summary>
         private void removeSegmentationResultForCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -928,7 +928,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveSegmentationResultsForAllImagesToolStripMenuItem object.
+        /// Handles the Click event of removeSegmentationResultsForAllImagesToolStripMenuItem object.
         /// </summary>
         private void removeSegmentationResultsForAllImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -946,7 +946,7 @@ namespace OcrDemo
 #region 'OCR' menu
 
         /// <summary>
-        /// Handles the Click event of OcrSettingsToolStripMenuItem object.
+        /// Handles the Click event of ocrSettingsToolStripMenuItem object.
         /// </summary>
         private void ocrSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -996,7 +996,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of RecognizeTextInCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of recognizeTextInCurrentImageToolStripMenuItem object.
         /// </summary>
         private void recognizeTextInCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1005,7 +1005,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RecognizeTextInAllImagesToolStripMenuItem object.
+        /// Handles the Click event of recognizeTextInAllImagesToolStripMenuItem object.
         /// </summary>
         private void recognizeTextInAllImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1015,7 +1015,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of RecognizeMICRInCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of recognizeMICRInCurrentImageToolStripMenuItem object.
         /// </summary>
         private void recognizeMICRInCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1030,7 +1030,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RecognizeMRZInCurrenImageToolStripMenuItem object.
+        /// Handles the Click event of recognizeMRZInCurrenImageToolStripMenuItem object.
         /// </summary>
         private void recognizeMRZInCurrenImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1046,7 +1046,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of DetectPageOrientationToolStripMenuItem object.
+        /// Handles the Click event of detectPageOrientationToolStripMenuItem object.
         /// </summary>
         private void detectPageOrientationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1079,7 +1079,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of AnalyzeLayoutToolStripMenuItem object.
+        /// Handles the Click event of analyzeLayoutToolStripMenuItem object.
         /// </summary>
         private void analyzeLayoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1112,7 +1112,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of RemoveTextRecognitionResultForCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of removeTextRecognitionResultForCurrentImageToolStripMenuItem object.
         /// </summary>
         private void removeTextRecognitionResultForCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1121,7 +1121,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveTextRecognitionResultsForAllImagesToolStripMenuItem1 object.
+        /// Handles the Click event of removeTextRecognitionResultsForAllImagesToolStripMenuItem1 object.
         /// </summary>
         private void removeTextRecognitionResultsForAllImagesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -1134,7 +1134,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the Click event of LoadRecognitionResultsFromDocumentToolStripMenuItem object.
+        /// Handles the Click event of loadRecognitionResultsFromDocumentToolStripMenuItem object.
         /// </summary>
         private void loadRecognitionResultsFromDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1209,7 +1209,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of LoadRecognitionResultsFromHOCRFileToolStripMenuItem object.
+        /// Handles the Click event of loadRecognitionResultsFromHOCRFileToolStripMenuItem object.
         /// </summary>
         private void loadRecognitionResultsFromHOCRFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1270,7 +1270,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SaveToHocrForCurrentImageToolStripMenuItem object.
+        /// Handles the Click event of saveToHocrForCurrentImageToolStripMenuItem object.
         /// </summary>
         private void saveToHocrForCurrentImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1296,7 +1296,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of SaveToHocrForAllImagesToolStripMenuItem object.
+        /// Handles the Click event of saveToHocrForAllImagesToolStripMenuItem object.
         /// </summary>
         private void saveToHocrForAllImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1344,7 +1344,7 @@ namespace OcrDemo
 #region 'Help' menu
 
         /// <summary>
-        /// Handles the Click event of AboutToolStripMenuItem object.
+        /// Handles the Click event of aboutToolStripMenuItem object.
         /// </summary>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1360,7 +1360,7 @@ namespace OcrDemo
 #region 'Text Recognition Regions' tab
 
         /// <summary>
-        /// Handles the Format event of TextRecognitionRegionsComboBox object.
+        /// Handles the Format event of textRecognitionRegionsComboBox object.
         /// </summary>
         private void textRecognitionRegionsComboBox_Format(object sender, ListControlConvertEventArgs e)
         {
@@ -1377,7 +1377,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of TextRecognitionRegionsComboBox object.
+        /// Handles the SelectedIndexChanged event of textRecognitionRegionsComboBox object.
         /// </summary>
         private void textRecognitionRegionsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1392,7 +1392,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of AddSegmentationRectButton object.
+        /// Handles the Click event of addSegmentationRectButton object.
         /// </summary>
         private void addSegmentationRectButton_Click(object sender, EventArgs e)
         {
@@ -1402,7 +1402,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveSelectedSegmentationRectButton object.
+        /// Handles the Click event of removeSelectedSegmentationRectButton object.
         /// </summary>
         private void removeSelectedSegmentationRectButton_Click(object sender, EventArgs e)
         {
@@ -1414,7 +1414,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RemoveAllTextRecognitionRegionsButton object.
+        /// Handles the Click event of removeAllTextRecognitionRegionsButton object.
         /// </summary>
         private void removeAllTextRecognitionRegionsButton_Click(object sender, EventArgs e)
         {
@@ -1427,7 +1427,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the SelectedLanguagesChanged event of SelectedTextRecognitionRegionOcrLanguagesListBox object.
+        /// Handles the SelectedLanguagesChanged event of selectedTextRecognitionRegionOcrLanguagesListBox object.
         /// </summary>
         private void selectedTextRecognitionRegionOcrLanguagesListBox_SelectedLanguagesChanged(object sender, EventArgs e)
         {
@@ -1447,7 +1447,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of RecognitionRegionTypeComboBox object.
+        /// Handles the SelectedIndexChanged event of recognitionRegionTypeComboBox object.
         /// </summary>
         private void recognitionRegionTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1467,7 +1467,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of SelectedTextRecognitionRegionTextRotationComboBox object.
+        /// Handles the SelectedIndexChanged event of selectedTextRecognitionRegionTextRotationComboBox object.
         /// </summary>
         private void selectedTextRecognitionRegionTextRotationComboBox_SelectedIndexChanged(
             object sender,
@@ -1494,7 +1494,7 @@ namespace OcrDemo
 #region 'Text Recognition Results' tab
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of OcrObjectTypeComboBox object.
+        /// Handles the SelectedIndexChanged event of ocrObjectTypeComboBox object.
         /// </summary>
         private void ocrObjectTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1502,7 +1502,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the TextChanged event of OcrObjectTextBox object.
+        /// Handles the TextChanged event of ocrObjectTextBox object.
         /// </summary>
         private void ocrObjectTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -1511,7 +1511,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DeleteAllOcrObjectsFromOcrResultButton object.
+        /// Handles the Click event of deleteAllOcrObjectsFromOcrResultButton object.
         /// </summary>
         private void deleteAllOcrObjectsFromOcrResultButton_Click(object sender, EventArgs e)
         {
@@ -1523,7 +1523,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DeleteSelectedOcrObjectFromOcrResultButton object.
+        /// Handles the Click event of deleteSelectedOcrObjectFromOcrResultButton object.
         /// </summary>
         private void deleteSelectedOcrObjectFromOcrResultButton_Click(object sender, EventArgs e)
         {
@@ -1532,7 +1532,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of SelectedObjectsListBox object.
+        /// Handles the SelectedIndexChanged event of selectedObjectsListBox object.
         /// </summary>
         private void selectedObjectsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1541,7 +1541,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DeselectSelectedOcrObjectsButton object.
+        /// Handles the Click event of deselectSelectedOcrObjectsButton object.
         /// </summary>
         private void deselectSelectedOcrObjectsButton_Click(object sender, EventArgs e)
         {
@@ -1553,7 +1553,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DeselectSelectedOcrObjectButton object.
+        /// Handles the Click event of deselectSelectedOcrObjectButton object.
         /// </summary>
         private void deselectSelectedOcrObjectButton_Click(object sender, EventArgs e)
         {
@@ -1563,7 +1563,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the ValueChanged event of OcrResultsConfidenceTrackBar object.
+        /// Handles the ValueChanged event of ocrResultsConfidenceTrackBar object.
         /// </summary>
         private void ocrResultsConfidenceTrackBar_ValueChanged(object sender, EventArgs e)
         {
@@ -1580,7 +1580,7 @@ namespace OcrDemo
 #region Viewers
 
         /// <summary>
-        /// Handles the KeyDown event of ImageViewer1 object.
+        /// Handles the KeyDown event of imageViewer1 object.
         /// </summary>
         private void imageViewer1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1595,7 +1595,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the FocusedIndexChanged event of ImageViewer1 object.
+        /// Handles the FocusedIndexChanged event of imageViewer1 object.
         /// </summary>
         private void imageViewer1_FocusedIndexChanged(object sender, FocusedIndexChangedEventArgs e)
         {
@@ -1612,7 +1612,7 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Handles the FocusedIndexChanged event of ThumbnailViewer1 object.
+        /// Handles the FocusedIndexChanged event of thumbnailViewer1 object.
         /// </summary>
         private void thumbnailViewer1_FocusedIndexChanged(object sender, FocusedIndexChangedEventArgs e)
         {
@@ -1624,7 +1624,7 @@ namespace OcrDemo
 
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of TabControl1 object.
+        /// Handles the SelectedIndexChanged event of tabControl1 object.
         /// </summary>
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
