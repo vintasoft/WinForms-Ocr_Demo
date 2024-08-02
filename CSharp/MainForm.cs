@@ -29,6 +29,8 @@ using Vintasoft.Imaging.UI.VisualTools;
 using DemosCommonCode;
 using DemosCommonCode.Imaging;
 using DemosCommonCode.Imaging.Codecs;
+
+
 #if !REMOVE_PDF_PLUGIN
 using DemosCommonCode.Pdf;
 #endif
@@ -784,12 +786,12 @@ namespace OcrDemo
             Close();
         }
 
-#endregion
+        #endregion
 
 
-#region 'View' menu
+        #region 'View' menu
 
-#region Thumbnail viewer
+        #region Thumbnail viewer
 
         /// <summary>
         /// Handles the Click event of thumbnailViewerSettingsToolStripMenuItem object.
@@ -802,10 +804,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Image viewer
+        #region Image viewer
 
         /// <summary>
         /// Handles the Click event of imageScaleModeMenuItem object.
@@ -874,12 +876,12 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
-#endregion
+        #endregion
 
 
-#region 'Segmentation' menu
+        #region 'Segmentation' menu
 
         /// <summary>
         /// Handles the Click event of segmentCurrentImageToolStripMenuItem object.
@@ -940,10 +942,10 @@ namespace OcrDemo
             UpdateUI();
         }
 
-#endregion
+        #endregion
 
 
-#region 'OCR' menu
+        #region 'OCR' menu
 
         /// <summary>
         /// Handles the Click event of ocrSettingsToolStripMenuItem object.
@@ -1109,7 +1111,6 @@ namespace OcrDemo
             // specify that "Text recognition results" tab should show OCR result for symbols
             ocrObjectTypeComboBox.SelectedItem = OcrObjectType.Symbol;
         }
-
 
         /// <summary>
         /// Handles the Click event of removeTextRecognitionResultForCurrentImageToolStripMenuItem object.
@@ -1338,10 +1339,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region 'Help' menu
+        #region 'Help' menu
 
         /// <summary>
         /// Handles the Click event of aboutToolStripMenuItem object.
@@ -1354,10 +1355,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region 'Text Recognition Regions' tab
+        #region 'Text Recognition Regions' tab
 
         /// <summary>
         /// Handles the Format event of textRecognitionRegionsComboBox object.
@@ -1488,10 +1489,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region 'Text Recognition Results' tab
+        #region 'Text Recognition Results' tab
 
         /// <summary>
         /// Handles the SelectedIndexChanged event of ocrObjectTypeComboBox object.
@@ -1574,10 +1575,10 @@ namespace OcrDemo
             HighlightOcrResultsOnImage();
         }
 
-#endregion
+        #endregion
 
 
-#region Viewers
+        #region Viewers
 
         /// <summary>
         /// Handles the KeyDown event of imageViewer1 object.
@@ -1620,7 +1621,7 @@ namespace OcrDemo
             UpdateUI();
         }
 
-#endregion
+        #endregion
 
 
         /// <summary>
@@ -1639,10 +1640,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Init
+        #region Init
 
         /// <summary>
         /// Inits the image scale menu.
@@ -1708,10 +1709,10 @@ namespace OcrDemo
             selectedTextRecognitionRegionTypeComboBox.SelectedItem = RecognitionRegionType.RecognizeSingleBlock;
         }
 
-#endregion
+        #endregion
 
 
-#region UI State
+        #region UI State
 
         /// <summary>
         /// Updates the user interface of this form.
@@ -1801,10 +1802,10 @@ namespace OcrDemo
             imageViewerToolStrip1.Enabled = !isFileLoading && !isProcessing;
         }
 
-#endregion
+        #endregion
 
 
-#region Image Manipulation
+        #region Image Manipulation
 
         /// <summary>
         /// Adds images to the viewer.
@@ -1848,10 +1849,10 @@ namespace OcrDemo
             UpdateUI();
         }
 
-#endregion
+        #endregion
 
 
-#region Image segmentation
+        #region Image segmentation
 
         /// <summary>
         /// Executes segmentation of specified image.
@@ -1906,10 +1907,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Text Recognition Regions
+        #region Text Recognition Regions
 
         /// <summary>
         /// Returns the information about the text recognition regions on image.
@@ -2028,10 +2029,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Text Recognition
+        #region Text Recognition
 
         /// <summary>
         /// Recognizes text in images asynchronously.
@@ -2293,10 +2294,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Post-processing of text recognition (OCR) results
+        #region Post-processing of text recognition (OCR) results
 
         /// <summary>
         /// Replaces non-standard symbols in OCR result page.
@@ -2321,10 +2322,10 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Text Recognition (OCR) Results
+        #region Text Recognition (OCR) Results
 
         /// <summary>
         /// Highlights OCR results on focused image.
@@ -2409,10 +2410,10 @@ namespace OcrDemo
             _ocrResultEditorTool.Update();
         }
 
-#endregion
+        #endregion
 
 
-#region Common
+        #region Common
 
         /// <summary>
         /// Updates the information about focused image.
@@ -2672,10 +2673,10 @@ namespace OcrDemo
         }
 #endif
 
-#endregion
+        #endregion
 
 
-#region View Rotation
+        #region View Rotation
 
         /// <summary>
         /// Rotates images in both annotation viewer and thumbnail viewer by 90 degrees clockwise.
@@ -2711,15 +2712,15 @@ namespace OcrDemo
             }
         }
 
-#endregion
+        #endregion
 
-#endregion
+        #endregion
 
-#endregion
+        #endregion
 
 
 
-#region Delegates
+        #region Delegates
 
         delegate void UpdateUIDelegate();
 
@@ -2728,7 +2729,7 @@ namespace OcrDemo
         delegate void SaveOcrResultDelegate(ImageOcrRecognitionSettings[] imageOcrRecognitionSettings, OcrPage[] pages);
 
 
-#endregion
+        #endregion
 
     }
 }

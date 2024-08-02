@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Vintasoft.Imaging.UI.VisualTools;
 using Vintasoft.Imaging.Ocr;
 using Vintasoft.Imaging.Ocr.Results;
+using Vintasoft.Imaging;
 
 namespace OcrDemo
 {
@@ -299,6 +300,7 @@ namespace OcrDemo
         public void Update()
         {
             _resultViewerTool.Items.Clear();
+
             _highlightedObjects = null;
             FocusedObject = null;
 
