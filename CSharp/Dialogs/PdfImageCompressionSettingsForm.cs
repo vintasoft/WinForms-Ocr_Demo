@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging.Codecs.Encoders;
@@ -34,6 +35,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the PDF compression type.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public PdfCompression Compression
         {
             get
@@ -49,6 +51,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the PDF compression settings.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public PdfCompressionSettings CompressionSettings
         {
             get
@@ -65,6 +68,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the PDF MRC compression settings.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public PdfMrcCompressionSettings MrcCompressionSettings
         {
             get

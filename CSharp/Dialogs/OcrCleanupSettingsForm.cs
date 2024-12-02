@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging.Ocr.Results;
@@ -40,6 +41,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the OCR cleanup settings.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public OcrCleanupSettings Settings
         {
             get

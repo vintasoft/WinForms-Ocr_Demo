@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ using Vintasoft.Imaging.UI;
 using DemosCommonCode.Imaging;
 using DemosCommonCode.Imaging.Codecs;
 using DemosCommonCode.Twain;
+
 #if !REMOVE_PDF_PLUGIN
 using DemosCommonCode.Pdf;
 #endif
@@ -89,6 +91,7 @@ namespace DemosCommonCode.Ocr
         /// Gets or sets a value indicating whether
         /// to open image from file when form is shown.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool OpenFileWhenShown
         {
             get
@@ -106,6 +109,7 @@ namespace DemosCommonCode.Ocr
         /// Gets or sets a value indicating whether
         /// to acquire image from scanner when form is shown.
         /// </value>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ScanImageWhenShown
         {
             get
@@ -290,7 +294,7 @@ namespace DemosCommonCode.Ocr
         /// </summary>
         private void ocrPreprocessingCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            ocrPreprocessingGroupBox.Enabled = ocrPreprocessingCheckBox.Checked;
+            tableLayoutPanel3.Enabled = ocrPreprocessingCheckBox.Checked;
         }
 
         /// <summary>

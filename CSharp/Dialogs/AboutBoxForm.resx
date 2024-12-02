@@ -128,7 +128,7 @@
 
 - Visualize image segmentation using custom visual tool (RecognitionRegionEditorTool).
 
-- Set OCR settings (select language from about 60 available languages, binarization mode, etc). 
+- Set OCR settings (select language from about more than 100 available languages, binarization mode, etc). 
 
 - Recognize text on the whole image or in region of interest. Multithreading is used.
 

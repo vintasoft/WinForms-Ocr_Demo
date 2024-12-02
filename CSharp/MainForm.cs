@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -29,6 +30,7 @@ using Vintasoft.Imaging.UI.VisualTools;
 using DemosCommonCode;
 using DemosCommonCode.Imaging;
 using DemosCommonCode.Imaging.Codecs;
+
 
 
 #if !REMOVE_PDF_PLUGIN
@@ -277,12 +279,12 @@ namespace OcrDemo
                     {
                         "",
                         @"TesseractOCR\",
-                        @"Debug\net6.0-windows\TesseractOCR\",
-                        @"Release\net6.0-windows\TesseractOCR\",
                         @"Debug\net7.0-windows\TesseractOCR\",
                         @"Release\net7.0-windows\TesseractOCR\",
                         @"Debug\net8.0-windows\TesseractOCR\",
                         @"Release\net8.0-windows\TesseractOCR\",
+                        @"Debug\net9.0-windows\TesseractOCR\",
+                        @"Release\net9.0-windows\TesseractOCR\",
                     };
 
                     // search tesseract dll
@@ -335,6 +337,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the current text recognition region of focused image.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public RecognitionRegion CurrentTextRecognitionRegion
         {
             get
@@ -418,6 +421,7 @@ namespace OcrDemo
         /// <summary>
         /// Gets or sets the OCR result for the focused image.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public OcrPage OcrResultForFocusedImage
         {
             get
