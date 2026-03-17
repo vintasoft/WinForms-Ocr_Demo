@@ -1,4 +1,4 @@
-namespace OcrDemo
+﻿namespace OcrDemo
 {
     partial class PdfImageCompressionSettingsForm
     {
@@ -28,7 +28,7 @@ namespace OcrDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.pdfImageCompressionControl1 = new DemosCommonCode.Imaging.Codecs.Dialogs.PdfImageCompressionControl();
+            this.pdfImageCompressionControl1 = new CommonCode.Imaging.Codecs.Dialogs.PdfImageCompressionControl();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -90,7 +90,7 @@ namespace OcrDemo
 
         #endregion
 
-        private DemosCommonCode.Imaging.Codecs.Dialogs.PdfImageCompressionControl pdfImageCompressionControl1;
+        private CommonCode.Imaging.Codecs.Dialogs.PdfImageCompressionControl pdfImageCompressionControl1;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
     }

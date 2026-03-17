@@ -1,4 +1,4 @@
-
+﻿
 namespace OcrDemo
 {
     partial class OcrTextOverImageSettingsForm
@@ -31,7 +31,7 @@ namespace OcrDemo
         {
             this.okButton = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textQualityValueEditorControl = new DemosCommonCode.CustomControls.ValueEditorControl();
+            this.textQualityValueEditorControl = new CommonCode.CustomControls.ValueEditorControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -94,7 +94,7 @@ namespace OcrDemo
 
         #endregion
 
-        private DemosCommonCode.CustomControls.ValueEditorControl textQualityValueEditorControl;
+        private CommonCode.CustomControls.ValueEditorControl textQualityValueEditorControl;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Panel panel1;

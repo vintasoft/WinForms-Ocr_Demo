@@ -27,16 +27,16 @@ using Vintasoft.Imaging.Processing;
 using Vintasoft.Imaging.UI;
 using Vintasoft.Imaging.UI.VisualTools;
 
-using DemosCommonCode;
-using DemosCommonCode.Imaging;
-using DemosCommonCode.Imaging.Codecs;
+using CommonCode;
+using CommonCode.Imaging;
+using CommonCode.Imaging.Codecs;
 
 
 
 #if !REMOVE_PDF_PLUGIN
-using DemosCommonCode.Pdf;
+using CommonCode.Pdf;
 #endif
-using DemosCommonCode.Ocr;
+using CommonCode.Ocr;
 
 
 namespace OcrDemo

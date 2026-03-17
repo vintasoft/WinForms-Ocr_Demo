@@ -1,4 +1,4 @@
-
+﻿
 namespace OcrDemo
 {
     partial class OcrCleanupSettingsForm
@@ -29,9 +29,9 @@ namespace OcrDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.lineMinConfidenceValueEditorControl = new DemosCommonCode.CustomControls.ValueEditorControl();
-            this.wordMinConfidenceValueEditorControl = new DemosCommonCode.CustomControls.ValueEditorControl();
-            this.symbolMinConfidenceValueEditorControl = new DemosCommonCode.CustomControls.ValueEditorControl();
+            this.lineMinConfidenceValueEditorControl = new CommonCode.CustomControls.ValueEditorControl();
+            this.wordMinConfidenceValueEditorControl = new CommonCode.CustomControls.ValueEditorControl();
+            this.symbolMinConfidenceValueEditorControl = new CommonCode.CustomControls.ValueEditorControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.okButton = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -148,9 +148,9 @@ namespace OcrDemo
 
         #endregion
 
-        private DemosCommonCode.CustomControls.ValueEditorControl lineMinConfidenceValueEditorControl;
-        private DemosCommonCode.CustomControls.ValueEditorControl wordMinConfidenceValueEditorControl;
-        private DemosCommonCode.CustomControls.ValueEditorControl symbolMinConfidenceValueEditorControl;
+        private CommonCode.CustomControls.ValueEditorControl lineMinConfidenceValueEditorControl;
+        private CommonCode.CustomControls.ValueEditorControl wordMinConfidenceValueEditorControl;
+        private CommonCode.CustomControls.ValueEditorControl symbolMinConfidenceValueEditorControl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button buttonCancel;

@@ -1,4 +1,4 @@
-namespace DemosCommonCode.Ocr
+﻿namespace CommonCode.Ocr
 {
     partial class AddImagesForm
     {

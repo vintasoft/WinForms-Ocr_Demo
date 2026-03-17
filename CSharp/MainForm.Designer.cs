@@ -1,4 +1,4 @@
-namespace OcrDemo
+﻿namespace OcrDemo
 {
     partial class MainForm
     {
@@ -157,7 +157,7 @@ namespace OcrDemo
             this.objectTypeLabel = new System.Windows.Forms.Label();
             this.selectedTextRecognitionRegionGroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.selectedTextRecognitionRegionOcrLanguagesListBox = new DemosCommonCode.Imaging.OcrLanguagesListBox();
+            this.selectedTextRecognitionRegionOcrLanguagesListBox = new CommonCode.Imaging.OcrLanguagesListBox();
             this.selectedTextRecognitionRegionTypeComboBox = new System.Windows.Forms.ComboBox();
             this.recognitionRegionTypeLabel = new System.Windows.Forms.Label();
             this.selectedTextRecognitionRegionTextRotationComboBox = new System.Windows.Forms.ComboBox();
@@ -178,7 +178,7 @@ namespace OcrDemo
             this.recognitionResultsTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.imageViewerToolStrip1 = new DemosCommonCode.Imaging.ImageViewerToolStrip();
+            this.imageViewerToolStrip1 = new CommonCode.Imaging.ImageViewerToolStrip();
             this.mainMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1752,7 +1752,7 @@ namespace OcrDemo
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsPdfDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pdfTextOnlyToolStripMenuItem;
-        private DemosCommonCode.Imaging.ImageViewerToolStrip imageViewerToolStrip1;
+        private CommonCode.Imaging.ImageViewerToolStrip imageViewerToolStrip1;
         private System.Windows.Forms.Button addTextRecognitionRegionButton;
         private System.Windows.Forms.ComboBox textRecognitionRegionsComboBox;
         private System.Windows.Forms.Label textRecognitionRegionsLabel;
@@ -1769,7 +1769,7 @@ namespace OcrDemo
         private System.Windows.Forms.ToolStripMenuItem saveAsFormattedTextFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsTextFileToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox4;
-        private DemosCommonCode.Imaging.OcrLanguagesListBox selectedTextRecognitionRegionOcrLanguagesListBox;
+        private CommonCode.Imaging.OcrLanguagesListBox selectedTextRecognitionRegionOcrLanguagesListBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

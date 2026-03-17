@@ -14,15 +14,15 @@ using Vintasoft.Imaging.ImageProcessing.Info;
 using Vintasoft.Imaging.ImageProcessing.Transforms;
 using Vintasoft.Imaging.UI;
 
-using DemosCommonCode.Imaging;
-using DemosCommonCode.Imaging.Codecs;
-using DemosCommonCode.Twain;
+using CommonCode.Imaging;
+using CommonCode.Imaging.Codecs;
+using CommonCode.Twain;
 
 #if !REMOVE_PDF_PLUGIN
-using DemosCommonCode.Pdf;
+using CommonCode.Pdf;
 #endif
 
-namespace DemosCommonCode.Ocr
+namespace CommonCode.Ocr
 {
     /// <summary>
     /// A form that allows to add images.
