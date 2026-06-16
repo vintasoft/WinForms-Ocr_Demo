@@ -180,6 +180,15 @@ namespace OcrDemo
         #region Constructors
 
         /// <summary>
+        /// Initializes the <see cref="MainForm"/> class.
+        /// </summary>
+        static MainForm()
+        {
+            Jbig2AssemblyLoader.Load();
+            Jpeg2000AssemblyLoader.Load();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MainForm"/> class.
         /// </summary>
         public MainForm()
@@ -193,9 +202,6 @@ namespace OcrDemo
             // init the PDF MRC compression settings
             _pdfMrcCompressionSettings = new PdfMrcCompressionSettings();
 #endif
-
-            Jbig2AssemblyLoader.Load();
-            Jpeg2000AssemblyLoader.Load();
 
             this.Text = string.Format("VintaSoft OCR Demo v{0}", ImagingGlobalSettings.ProductVersion);
 
@@ -2650,7 +2656,7 @@ namespace OcrDemo
                                 if (!result.IsSuccessful)
                                 {
                                     // throw error
-                                    throw result.CreateConversionException();
+                                    throw result.CreateProcessingException();
                                 }
                             }
                         }
