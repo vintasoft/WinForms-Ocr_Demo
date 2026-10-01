@@ -1,4 +1,4 @@
-﻿namespace OcrDemo
+namespace OcrDemo
 {
     partial class MainForm
     {
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Vintasoft.Imaging.Utils.WinFormsSystemClipboard winFormsSystemClipboard1 = new Vintasoft.Imaging.Utils.WinFormsSystemClipboard();
-            Vintasoft.Imaging.Codecs.Decoders.RenderingSettings renderingSettings1 = new Vintasoft.Imaging.Codecs.Decoders.RenderingSettings();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance1 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance2 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance3 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
@@ -64,6 +62,7 @@
             this.pdfTextOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.cleanupSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsDOCXDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsFormattedTextFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsTextFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -227,6 +226,7 @@
             this.closeImagesToolStripMenuItem,
             this.toolStripSeparator4,
             this.saveAsPdfDocumentToolStripMenuItem,
+            this.saveAsDOCXDocumentToolStripMenuItem,
             this.saveAsTextToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
@@ -428,6 +428,13 @@
             this.cleanupSettingsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.cleanupSettingsToolStripMenuItem.Text = "Settings...";
             this.cleanupSettingsToolStripMenuItem.Click += new System.EventHandler(this.cleanupSettingsToolStripMenuItem_Click);
+            // 
+            // saveAsDOCXDocumentToolStripMenuItem
+            // 
+            this.saveAsDOCXDocumentToolStripMenuItem.Name = "saveAsDOCXDocumentToolStripMenuItem";
+            this.saveAsDOCXDocumentToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.saveAsDOCXDocumentToolStripMenuItem.Text = "Save As DOCX Document...";
+            this.saveAsDOCXDocumentToolStripMenuItem.Click += new System.EventHandler(this.saveAsDOCXDocumentToolStripMenuItem_Click);
             // 
             // saveAsTextToolStripMenuItem
             // 
@@ -1278,7 +1285,6 @@
             this.selectedTextRecognitionRegionOcrLanguagesListBox.Location = new System.Drawing.Point(3, 16);
             this.selectedTextRecognitionRegionOcrLanguagesListBox.Margin = new System.Windows.Forms.Padding(0);
             this.selectedTextRecognitionRegionOcrLanguagesListBox.Name = "selectedTextRecognitionRegionOcrLanguagesListBox";
-            this.selectedTextRecognitionRegionOcrLanguagesListBox.SelectedLanguages = new Vintasoft.Imaging.Ocr.OcrLanguage[0];
             this.selectedTextRecognitionRegionOcrLanguagesListBox.Size = new System.Drawing.Size(245, 394);
             this.selectedTextRecognitionRegionOcrLanguagesListBox.TabIndex = 0;
             this.selectedTextRecognitionRegionOcrLanguagesListBox.SelectedLanguagesChanged += new System.EventHandler(this.selectedTextRecognitionRegionOcrLanguagesListBox_SelectedLanguagesChanged);
@@ -1379,15 +1385,7 @@
             // imageViewer1
             // 
             this.imageViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageViewer1.Clipboard = winFormsSystemClipboard1;
             this.imageViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageViewer1.FastScrollingCursor = System.Windows.Forms.Cursors.SizeAll;
-            this.imageViewer1.FastScrollingInterval = 10;
-            this.imageViewer1.FastScrollingMinDistance = 5F;
-            this.imageViewer1.FastScrollingMouseButton = System.Windows.Forms.MouseButtons.Middle;
-            this.imageViewer1.FastScrollingScale = 0.5F;
-            this.imageViewer1.ImageRenderingSettings = renderingSettings1;
-            this.imageViewer1.ImageRotationAngle = 0;
             this.imageViewer1.Location = new System.Drawing.Point(0, 0);
             this.imageViewer1.Name = "imageViewer1";
             this.imageViewer1.ShortcutCut = System.Windows.Forms.Shortcut.None;
@@ -1405,13 +1403,7 @@
             this.thumbnailViewer1.AllowDrop = true;
             this.thumbnailViewer1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
             this.thumbnailViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbnailViewer1.Clipboard = winFormsSystemClipboard1;
             this.thumbnailViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thumbnailViewer1.FastScrollingCursor = System.Windows.Forms.Cursors.SizeAll;
-            this.thumbnailViewer1.FastScrollingInterval = 10;
-            this.thumbnailViewer1.FastScrollingMinDistance = 5F;
-            this.thumbnailViewer1.FastScrollingMouseButton = System.Windows.Forms.MouseButtons.Middle;
-            this.thumbnailViewer1.FastScrollingScale = 0.5F;
             thumbnailAppearance1.BackColor = System.Drawing.Color.Transparent;
             thumbnailAppearance1.BorderColor = System.Drawing.Color.Gray;
             thumbnailAppearance1.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Dotted;
@@ -1448,8 +1440,6 @@
             thumbnailCaption1.Padding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
             thumbnailCaption1.TextColor = System.Drawing.Color.Black;
             this.thumbnailViewer1.ThumbnailCaption = thumbnailCaption1;
-            this.thumbnailViewer1.ThumbnailControlPadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
-            this.thumbnailViewer1.ThumbnailImagePadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
             this.thumbnailViewer1.ThumbnailMargin = new System.Windows.Forms.Padding(3);
             this.thumbnailViewer1.ThumbnailRenderingThreadCount = 4;
             this.thumbnailViewer1.ThumbnailSize = new System.Drawing.Size(100, 100);
@@ -1601,13 +1591,11 @@
             this.imageViewerToolStrip1.ImageViewer = this.imageViewer1;
             this.imageViewerToolStrip1.Location = new System.Drawing.Point(0, 24);
             this.imageViewerToolStrip1.Name = "imageViewerToolStrip1";
-            this.imageViewerToolStrip1.PageCount = 0;
             this.imageViewerToolStrip1.PrintButtonEnabled = true;
             this.imageViewerToolStrip1.ScanButtonEnabled = true;
             this.imageViewerToolStrip1.Size = new System.Drawing.Size(1041, 25);
             this.imageViewerToolStrip1.TabIndex = 6;
             this.imageViewerToolStrip1.Text = "imageViewerToolStrip1";
-            this.imageViewerToolStrip1.UseImageViewerImages = true;
             this.imageViewerToolStrip1.OpenFile += new System.EventHandler(this.openToolStripMenuItem_Click);
             this.imageViewerToolStrip1.Scan += new System.EventHandler(this.scanImagesToolStripMenuItem_Click);
             // 
@@ -1805,5 +1793,6 @@
         private System.Windows.Forms.ToolStripMenuItem pdfTextOverImageSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem cleanupSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsDOCXDocumentToolStripMenuItem;
     }
 }

@@ -33,6 +33,8 @@ using CommonCode.Imaging.Codecs;
 
 
 
+
+
 #if !REMOVE_PDF_PLUGIN
 using CommonCode.Pdf;
 #endif
@@ -287,10 +289,10 @@ namespace OcrDemo
                         @"TesseractOCR\",
                         @"Debug\net8.0-windows\TesseractOCR\",
                         @"Release\net8.0-windows\TesseractOCR\",
-                        @"Debug\net9.0-windows\TesseractOCR\",
-                        @"Release\net9.0-windows\TesseractOCR\",
                         @"Debug\net10.0-windows\TesseractOCR\",
                         @"Release\net10.0-windows\TesseractOCR\",
+                        @"Debug\net11.0-windows\TesseractOCR\",
+                        @"Release\net11.0-windows\TesseractOCR\",
                     };
 
                     // search tesseract dll
@@ -360,7 +362,7 @@ namespace OcrDemo
                 {
                     selectedTextRecognitionRegionRectangleLabel.Text = "";
                     selectedTextRecognitionRegionOcrLanguagesListBox.SelectedLanguages = null;
-                    selectedTextRecognitionRegionTypeComboBox.SelectedItem = RecognitionRegionType.RecognizeSingleColumn;
+                    selectedTextRecognitionRegionTypeComboBox.SelectedItem = RecognitionRegionType.RecognizeSingleBlock;
                     selectedTextRecognitionRegionTextRotationComboBox.SelectedIndex = 0;
 
                     textRecognitionRegionsComboBox.SelectedIndex = -1;
@@ -529,7 +531,7 @@ namespace OcrDemo
                 {
                     CloseImages();
 
-                    AddNewImages(addImagesForm.Images, addImagesForm.SegmentationResults);
+                    AddNewImages(addImagesForm.Images, addImagesForm.RegionDetectionResults);
                 }
             }
 
@@ -548,7 +550,7 @@ namespace OcrDemo
                 addImagesForm.OpenFileWhenShown = true;
                 if (addImagesForm.ShowDialog() == DialogResult.OK)
                 {
-                    AddNewImages(addImagesForm.Images, addImagesForm.SegmentationResults);
+                    AddNewImages(addImagesForm.Images, addImagesForm.RegionDetectionResults);
                 }
             }
 
@@ -568,7 +570,7 @@ namespace OcrDemo
                 addImagesForm.ScanImageWhenShown = true;
                 if (addImagesForm.ShowDialog() == DialogResult.OK)
                 {
-                    AddNewImages(addImagesForm.Images, addImagesForm.SegmentationResults);
+                    AddNewImages(addImagesForm.Images, addImagesForm.RegionDetectionResults);
                 }
             }
 
@@ -744,6 +746,17 @@ namespace OcrDemo
             }
 #endif
         }
+
+        /// <summary>
+        /// Handles the Click event of saveAsDOCXDocumentToolStripMenuItem object.
+        /// </summary>
+        private void saveAsDOCXDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+#if !REMOVE_OFFICE_PLUGIN && !REMOVE_PDF_PLUGIN
+            // save OCR result to a DOCX document
+            SaveOcrResultInDocxDocument();
+#endif
+        }   
 
         /// <summary>
         /// Handles the Click event of cleanupSettingsToolStripMenuItem object.
@@ -1765,6 +1778,7 @@ namespace OcrDemo
             fileToolStripMenuItem.Enabled = !isFileLoading && !isProcessing;
             closeImagesToolStripMenuItem.Enabled = isFileLoaded;
             saveAsPdfDocumentToolStripMenuItem.Enabled = isFileLoaded && isImagesRecognized;
+            saveAsDOCXDocumentToolStripMenuItem.Enabled = isFileLoaded && isImagesRecognized;
             pdfImageOverTextToolStripMenuItem.Enabled = isFileLoaded && isImagesRecognized;
             pdfTextOnlyToolStripMenuItem.Enabled = isFileLoaded && isImagesRecognized;
             saveAsTextToolStripMenuItem.Enabled = isFileLoaded && isCurrentPageRecognized;
@@ -1821,22 +1835,22 @@ namespace OcrDemo
         /// Adds images to the viewer.
         /// </summary>
         /// <param name="images">Images to add.</param>
-        /// <param name="segmentationResults">Images segmentation results.</param>
+        /// <param name="regionDetectionResults">The region detection results.</param>
         private void AddNewImages(
             ImageCollection images,
-            Dictionary<VintasoftImage,
-            ReadOnlyCollection<ImageRegion>> segmentationResults)
+            Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>> regionDetectionResults)
         {
             thumbnailViewer1.Images.AddRange(images.ToArray());
 
-            if (segmentationResults != null)
+            // if the image segmentation results exist
+            if (regionDetectionResults != null)
             {
-                foreach (VintasoftImage image in segmentationResults.Keys)
+                foreach (VintasoftImage image in regionDetectionResults.Keys)
                 {
                     // get text recognition regions on image
                     List<RecognitionRegion> regions = GetTextRecognitionRegions(image);
-                    // adds text regions from image segmentation results to the text recognition regions
-                    AddSegmentationResultsToRecognitionRegions(regions, segmentationResults[image]);
+                    // adds detected regions to the text recognition regions
+                    AddDetectedRegionsToRecognitionRegions(regions, regionDetectionResults[image]);
                 }
 
                 // update highlight
@@ -1885,8 +1899,8 @@ namespace OcrDemo
                 // clear recognition regions
                 regions.Clear();
 
-                // add text regions from image segmentation results to the text recognition regions
-                AddSegmentationResultsToRecognitionRegions(regions, segmentationCommand.Regions);
+                // add the detected regions to the text recognition regions
+                AddDetectedRegionsToRecognitionRegions(regions, segmentationCommand.Regions);
             }
             catch (Exception ex)
             {
@@ -1896,25 +1910,15 @@ namespace OcrDemo
         }
 
         /// <summary>
-        /// Adds the text regions from image segmentation results to the text recognition regions.
+        /// Adds the detected regions to the text recognition regions.
         /// </summary>
         /// <param name="regions">Text recognition regions.</param>
-        /// <param name="segmentationResults">Image segmentation result.</param>
-        private void AddSegmentationResultsToRecognitionRegions(
+        /// <param name="regionDetectionResults">Image segmentation result.</param>
+        private void AddDetectedRegionsToRecognitionRegions(
             List<RecognitionRegion> regions,
-            ReadOnlyCollection<ImageRegion> segmentationResults)
+            ReadOnlyCollection<ImageRegion> regionDetectionResults)
         {
-            // for each image region returned by image segmentation command
-            foreach (ImageRegion region in segmentationResults)
-            {
-                // if region may contain text
-                if (region.Type == ImageRegionType.Text)
-                {
-                    // add region to the text recognition region
-                    Rectangle rect = region.GetBoundingBox();
-                    regions.Add(new RecognitionRegion(new RegionOfInterest(rect), _tesseractOcrSettings.Language));
-                }
-            }
+            regions.AddRange(RecognitionRegion.FromImageRegions(regionDetectionResults, _tesseractOcrSettings.Language));
         }
 
         #endregion
@@ -2497,6 +2501,90 @@ namespace OcrDemo
 
             return false;
         }
+
+#if !REMOVE_PDF_PLUGIN && !REMOVE_OFFICE_PLUGIN
+        /// <summary>
+        /// Saves OCR result in a DOCX document.
+        /// </summary>
+        private void SaveOcrResultInDocxDocument()
+        {
+            try
+            {
+                saveFileDialog.Filter = "DOCX Documents(*.docx)|*.docx";
+                // show the save file dialog
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = saveFileDialog.FileName;
+
+                    // create new PDF document
+                    using (PdfDocument document = new PdfDocument())
+                    {
+                        // create a PDF document builder that helps to create searchable PDF document
+                        PdfDocumentBuilder documentBuilder = new PdfDocumentBuilder(document);
+                        documentBuilder.PageCreationMode = PdfPageCreationMode.TextOverImage;
+                        documentBuilder.RestoreNormalPageOrientation = true;
+                        documentBuilder.CleanupSettings = _cleanupSettings;
+                        documentBuilder.TextOverImageSettings = OcrTextOverImageSettings.DocxConverterSettings;
+
+                        // initialize the progress bar
+                        saveOcrResultsProgressBar.Value = 0;
+                        saveOcrResultsProgressBar.Maximum = imageViewer1.Images.Count + 1;
+                        saveOcrResultsProgressBar.Visible = true;
+
+                        // for each image
+                        foreach(VintasoftImage image in imageViewer1.Images)
+                        {
+                            // increment progress
+                            saveOcrResultsProgressBar.Value++;
+
+                            // if OCR was performed for the image
+                            OcrPage ocrPage = null;
+                            if (_imagesToOcrPages.TryGetValue(image, out ocrPage))
+                            {
+                                // add PDF page with OCR result to the PDF document
+                                documentBuilder.AddPage(image, ocrPage);
+                            }
+                            // if OCR was NOT performed for the image
+                            else
+                            {
+                                // add image to the PDF document
+                                documentBuilder.AddPage(image, null);
+                            }
+                        }
+
+                        // create PDF to DOCX converter
+                        using (Vintasoft.Imaging.Pdf.Office.PdfToDocxConverter converter = new Vintasoft.Imaging.Pdf.Office.PdfToDocxConverter())
+                        {
+                            converter.OutputFilename = filename;
+
+                            // set converter settings
+                            converter.ConvertGraphics = true;
+                            converter.DetectHeaderFooter = true;
+#if !REMOVE_DOCCLEANUP_PLUGIN
+                            converter.DetectTables = true;
+                            converter.TableDetectionCommand = new Vintasoft.Imaging.ImageProcessing.Info.TableDetection.TableWithBordersDetectionCommand();
+#endif
+
+                            // increment progress
+                            saveOcrResultsProgressBar.Value++;
+
+                            // convert PDF document to DOCX document
+                            converter.Execute(document);
+
+                            // open DOCX document using system-defined DOCX viewer
+                            ProcessStartInfo processInfo = new ProcessStartInfo(filename);
+                            processInfo.UseShellExecute = true;
+                            Process.Start(processInfo);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DemosTools.ShowErrorMessage(ex);
+            }
+        }
+#endif
 
 #if !REMOVE_PDF_PLUGIN
         /// <summary>

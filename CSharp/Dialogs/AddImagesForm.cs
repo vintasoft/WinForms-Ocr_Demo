@@ -74,15 +74,15 @@ namespace CommonCode.Ocr
 
         #region Properties
 
-        Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>> _segmentationResults;
+        Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>> _regionDetectionResults;
         /// <summary>
-        /// Gets the segmentation results.
+        /// Gets the region detection results.
         /// </summary>
-        public Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>> SegmentationResults
+        public Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>> RegionDetectionResults
         {
             get
             {
-                return _segmentationResults;
+                return _regionDetectionResults;
             }
         }
 
@@ -288,6 +288,14 @@ namespace CommonCode.Ocr
 
         #endregion
 
+        /// <summary>
+        /// Handles the CheckedChanged event of detectTablesWithBordersCheckBox object.
+        /// </summary>
+        private void detectTablesWithBordersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (detectTablesWithBordersCheckBox.Checked)
+                segmentationCheckBox.Checked = true;
+        }
 
         /// <summary>
         /// Handles the CheckedChanged event of ocrPreprocessingCheckBox object.
@@ -518,14 +526,37 @@ namespace CommonCode.Ocr
             else
                 preprocessingCommand.AutomaticalOrientation = new AutoTextOrientationCommand();
 
+            // if image segmentation is not necessary
             if (!segmentationCheckBox.Checked)
             {
+                // disable the document segmentation
                 preprocessingCommand.Segmentation = null;
             }
+            // if image segmentation is necessary
             else
             {
-                _segmentationResults = new Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>>();
+                _regionDetectionResults = new Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>>();
                 preprocessingCommand.Segmentation.BorderSize = 2;
+            }
+
+            // if table detection is not necessary
+            if (!detectTablesWithBordersCheckBox.Checked)
+            {
+                // disable the table detection
+                preprocessingCommand.TableDetection = null;
+            }
+            // if table detection is necessary
+            else
+            {
+                if (_regionDetectionResults == null)
+                    _regionDetectionResults = new Dictionary<VintasoftImage, ReadOnlyCollection<ImageRegion>>();
+
+                // enable AutomaticalTextInvert
+                preprocessingCommand.AutomaticalTextInvert = new AutoTextInvertCommand();
+                // add borders to inverted text, to detect tables
+                preprocessingCommand.AutomaticalTextInvert.BorderSize = 3;
+                // use image width as max width
+                preprocessingCommand.AutomaticalTextInvert.MaxWidth = 0;
             }
 
             if (preprocessingCommand.SupportedPixelFormats[0] == PixelFormat.Undefined)
@@ -550,9 +581,9 @@ namespace CommonCode.Ocr
                     DemosTools.ShowErrorMessage(ex);
                 }
 
-                if (preprocessingCommand.Segmentation != null)
+                if (preprocessingCommand.Segmentation != null || preprocessingCommand.TableDetection != null)
                 {
-                    _segmentationResults.Add(Images[i], preprocessingCommand.SegmentationTextRegions);
+                    _regionDetectionResults.Add(Images[i], preprocessingCommand.DetectedRegions);
                 }
                 Application.DoEvents();
             }

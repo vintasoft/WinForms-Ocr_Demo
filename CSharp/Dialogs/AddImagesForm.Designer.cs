@@ -1,4 +1,4 @@
-﻿namespace CommonCode.Ocr
+namespace CommonCode.Ocr
 {
     partial class AddImagesForm
     {
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Vintasoft.Imaging.Utils.WinFormsSystemClipboard winFormsSystemClipboard1 = new Vintasoft.Imaging.Utils.WinFormsSystemClipboard();
-            Vintasoft.Imaging.Codecs.Decoders.RenderingSettings renderingSettings1 = new Vintasoft.Imaging.Codecs.Decoders.RenderingSettings();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance1 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance2 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
             Vintasoft.Imaging.UI.ThumbnailAppearance thumbnailAppearance3 = new Vintasoft.Imaging.UI.ThumbnailAppearance();
@@ -43,13 +41,14 @@
             this.autoInvertCheckBox = new System.Windows.Forms.CheckBox();
             this.allImagesProgressBar = new System.Windows.Forms.ProgressBar();
             this.segmentationCheckBox = new System.Windows.Forms.CheckBox();
-            this.currentImageProgressBar = new System.Windows.Forms.ProgressBar();
             this.autoOrientationCheckBox = new System.Windows.Forms.CheckBox();
             this.halftoneRemovalCheckBox = new System.Windows.Forms.CheckBox();
             this.holePunchRemovalCheckBox = new System.Windows.Forms.CheckBox();
             this.clearBorderCheckBox = new System.Windows.Forms.CheckBox();
             this.despeckleCheckBox = new System.Windows.Forms.CheckBox();
             this.deskewChekBox = new System.Windows.Forms.CheckBox();
+            this.currentImageProgressBar = new System.Windows.Forms.ProgressBar();
+            this.detectTablesWithBordersCheckBox = new System.Windows.Forms.CheckBox();
             this.ocrPreprocessingCheckBox = new System.Windows.Forms.CheckBox();
             this.okButton = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -122,7 +121,7 @@
             this.ocrPreprocessingGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ocrPreprocessingGroupBox.Location = new System.Drawing.Point(0, 0);
             this.ocrPreprocessingGroupBox.Name = "ocrPreprocessingGroupBox";
-            this.ocrPreprocessingGroupBox.Size = new System.Drawing.Size(218, 252);
+            this.ocrPreprocessingGroupBox.Size = new System.Drawing.Size(218, 290);
             this.ocrPreprocessingGroupBox.TabIndex = 4;
             this.ocrPreprocessingGroupBox.TabStop = false;
             // 
@@ -132,20 +131,22 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.autoInvertCheckBox, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.allImagesProgressBar, 0, 9);
+            this.tableLayoutPanel3.Controls.Add(this.allImagesProgressBar, 0, 10);
             this.tableLayoutPanel3.Controls.Add(this.segmentationCheckBox, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.currentImageProgressBar, 0, 8);
             this.tableLayoutPanel3.Controls.Add(this.autoOrientationCheckBox, 0, 6);
             this.tableLayoutPanel3.Controls.Add(this.halftoneRemovalCheckBox, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.holePunchRemovalCheckBox, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.clearBorderCheckBox, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.despeckleCheckBox, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.deskewChekBox, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.currentImageProgressBar, 0, 9);
+            this.tableLayoutPanel3.Controls.Add(this.detectTablesWithBordersCheckBox, 0, 8);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 11;
+            this.tableLayoutPanel3.RowCount = 12;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -157,7 +158,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(212, 233);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(212, 271);
             this.tableLayoutPanel3.TabIndex = 14;
             // 
             // autoInvertCheckBox
@@ -176,7 +177,7 @@
             // allImagesProgressBar
             // 
             this.allImagesProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.allImagesProgressBar.Location = new System.Drawing.Point(3, 210);
+            this.allImagesProgressBar.Location = new System.Drawing.Point(3, 233);
             this.allImagesProgressBar.Name = "allImagesProgressBar";
             this.allImagesProgressBar.Size = new System.Drawing.Size(206, 17);
             this.allImagesProgressBar.TabIndex = 8;
@@ -192,14 +193,6 @@
             this.segmentationCheckBox.Text = "Segmentation";
             this.segmentationCheckBox.UseVisualStyleBackColor = true;
             // 
-            // currentImageProgressBar
-            // 
-            this.currentImageProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.currentImageProgressBar.Location = new System.Drawing.Point(3, 187);
-            this.currentImageProgressBar.Name = "currentImageProgressBar";
-            this.currentImageProgressBar.Size = new System.Drawing.Size(206, 17);
-            this.currentImageProgressBar.TabIndex = 7;
-            // 
             // autoOrientationCheckBox
             // 
             this.autoOrientationCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -208,7 +201,7 @@
             this.autoOrientationCheckBox.Name = "autoOrientationCheckBox";
             this.autoOrientationCheckBox.Size = new System.Drawing.Size(99, 17);
             this.autoOrientationCheckBox.TabIndex = 12;
-            this.autoOrientationCheckBox.Text = "Auto Orienation";
+            this.autoOrientationCheckBox.Text = "Auto Orientation";
             this.autoOrientationCheckBox.UseVisualStyleBackColor = true;
             // 
             // halftoneRemovalCheckBox
@@ -276,6 +269,26 @@
             this.deskewChekBox.Text = "Deskew";
             this.deskewChekBox.UseVisualStyleBackColor = true;
             // 
+            // currentImageProgressBar
+            // 
+            this.currentImageProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentImageProgressBar.Location = new System.Drawing.Point(3, 210);
+            this.currentImageProgressBar.Name = "currentImageProgressBar";
+            this.currentImageProgressBar.Size = new System.Drawing.Size(206, 17);
+            this.currentImageProgressBar.TabIndex = 7;
+            // 
+            // detectTablesWithBordersCheckBox
+            // 
+            this.detectTablesWithBordersCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.detectTablesWithBordersCheckBox.AutoSize = true;
+            this.detectTablesWithBordersCheckBox.Location = new System.Drawing.Point(3, 187);
+            this.detectTablesWithBordersCheckBox.Name = "detectTablesWithBordersCheckBox";
+            this.detectTablesWithBordersCheckBox.Size = new System.Drawing.Size(149, 17);
+            this.detectTablesWithBordersCheckBox.TabIndex = 14;
+            this.detectTablesWithBordersCheckBox.Text = "Detect tables with borders";
+            this.detectTablesWithBordersCheckBox.UseVisualStyleBackColor = true;
+            this.detectTablesWithBordersCheckBox.CheckedChanged += new System.EventHandler(this.detectTablesWithBordersCheckBox_CheckedChanged);
+            // 
             // ocrPreprocessingCheckBox
             // 
             this.ocrPreprocessingCheckBox.AutoSize = true;
@@ -292,7 +305,7 @@
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(633, 544);
+            this.okButton.Location = new System.Drawing.Point(633, 582);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(91, 23);
             this.okButton.TabIndex = 6;
@@ -304,7 +317,7 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(730, 544);
+            this.buttonCancel.Location = new System.Drawing.Point(730, 582);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(88, 23);
             this.buttonCancel.TabIndex = 7;
@@ -545,14 +558,11 @@
             // imageViewer1
             // 
             this.imageViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageViewer1.Clipboard = winFormsSystemClipboard1;
             this.imageViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageViewer1.ImageRenderingSettings = renderingSettings1;
-            this.imageViewer1.ImageRotationAngle = 0;
             this.imageViewer1.Location = new System.Drawing.Point(194, 3);
             this.imageViewer1.MasterViewer = this.thumbnailViewer1;
             this.imageViewer1.Name = "imageViewer1";
-            this.imageViewer1.Size = new System.Drawing.Size(400, 526);
+            this.imageViewer1.Size = new System.Drawing.Size(400, 564);
             this.imageViewer1.SizeMode = Vintasoft.Imaging.UI.ImageSizeMode.BestFit;
             this.imageViewer1.TabIndex = 5;
             this.imageViewer1.Text = "imageViewer1";
@@ -562,7 +572,6 @@
             this.thumbnailViewer1.AllowDrop = true;
             this.thumbnailViewer1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
             this.thumbnailViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbnailViewer1.Clipboard = winFormsSystemClipboard1;
             this.thumbnailViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             thumbnailAppearance1.BackColor = System.Drawing.Color.Transparent;
             thumbnailAppearance1.BorderColor = System.Drawing.Color.Gray;
@@ -587,7 +596,7 @@
             thumbnailAppearance4.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             thumbnailAppearance4.BorderWidth = 1;
             this.thumbnailViewer1.SelectedThumbnailAppearance = thumbnailAppearance4;
-            this.thumbnailViewer1.Size = new System.Drawing.Size(185, 468);
+            this.thumbnailViewer1.Size = new System.Drawing.Size(185, 506);
             this.thumbnailViewer1.TabIndex = 2;
             this.thumbnailViewer1.Text = "thumbnailViewer1";
             thumbnailAppearance5.BackColor = System.Drawing.Color.Transparent;
@@ -598,8 +607,6 @@
             thumbnailCaption1.Padding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
             thumbnailCaption1.TextColor = System.Drawing.Color.Black;
             this.thumbnailViewer1.ThumbnailCaption = thumbnailCaption1;
-            this.thumbnailViewer1.ThumbnailControlPadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
-            this.thumbnailViewer1.ThumbnailImagePadding = new Vintasoft.Imaging.PaddingF(0F, 0F, 0F, 0F);
             this.thumbnailViewer1.ThumbnailMargin = new System.Windows.Forms.Padding(3);
             this.thumbnailViewer1.ThumbnailSize = new System.Drawing.Size(100, 100);
             this.thumbnailViewer1.ThumbnailAdded += new System.EventHandler<Vintasoft.Imaging.UI.ThumbnailEventArgs>(this.thumbnailViewer1_ThumbnailAdded);
@@ -613,7 +620,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 280);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 252);
+            this.panel1.Size = new System.Drawing.Size(218, 290);
             this.panel1.TabIndex = 14;
             // 
             // tableLayoutPanel4
@@ -630,7 +637,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(218, 532);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(218, 570);
             this.tableLayoutPanel4.TabIndex = 15;
             // 
             // tableLayoutPanel5
@@ -649,7 +656,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(191, 532);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(191, 570);
             this.tableLayoutPanel5.TabIndex = 16;
             // 
             // tableLayoutPanel6
@@ -669,7 +676,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(815, 532);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(815, 570);
             this.tableLayoutPanel6.TabIndex = 17;
             // 
             // AddImagesForm
@@ -677,7 +684,7 @@
             this.AcceptButton = this.okButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(830, 576);
+            this.ClientSize = new System.Drawing.Size(830, 614);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.okButton);
@@ -753,5 +760,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.CheckBox detectTablesWithBordersCheckBox;
     }
 }
